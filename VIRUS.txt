@@ -1,0 +1,82 @@
+jrrhugf4rugfruirkrhfu4rhfurhfuherifheidjeokdpwksdpejvjbrfjewpkdribfejdpekfjerfjeodkeojfoeikfoeikf
+
+class Persona:
+    def __init__(self,nombre,edad,lugar_residencia):
+        self.nombre=nombre
+        self.edad=edad
+        self.lugar_residencia=lugar_residencia
+
+    def descripcion(self):
+        print("Nombre: {} Edad: {} Residencia: {}".format(self.nombre,self.edad,self.lugar_residencia))
+
+
+class Empleado(Persona):
+    def __init__(self,salario=1200,antiguedad,nombre,edad,lugar_residencia):
+
+        #Persona.__init__(self,"Mario",23,"China") Lo mismo que lo de abajo pero peor
+        super().__init__(nombre,edad,lugar_residencia)
+        
+        self.salario=salario
+        self.antiguedad=antiguedad
+
+    def descripcion(self):
+        super().descripcion()
+        print("Salario: {} Antiguedad: {}".format(self.salario,self.antiguedad))
+
+
+
+pepe=Persona("Pepe",34,"valencia")
+pepe.descripcion()
+
+mario=Empleado(3000,"Nose","Mario",23,"China")
+print(mario.salario)
+mario.descripcion()
+
+##print(isinstance(mario, Empleado))
+##print(isinstance(pepe, Empleado))
+##print(isinstance(mario, Persona))
+##print(isinstance(pepe,Persona))
+
+print(issubclass(Empleado, Persona))
+print(issubclass(Persona,Empleado))
+print(issubclass(Empleado, object))
+class Persona:
+    def __init__(self,nombre,edad,lugar_residencia):
+        self.nombre=nombre
+        self.edad=edad
+        self.lugar_residencia=lugar_residencia
+
+    def descripcion(self):
+        print("Nombre: {} Edad: {} Residencia: {}".format(self.nombre,self.edad,self.lugar_residencia))
+
+
+class Empleado(Persona):
+    def __init__(self,salario=1200,antiguedad,nombre,edad,lugar_residencia):
+
+        #Persona.__init__(self,"Mario",23,"China") Lo mismo que lo de abajo pero peor
+        super().__init__(nombre,edad,lugar_residencia)
+        
+        self.salario=salario
+        self.antiguedad=antiguedad
+
+    def descripcion(self):
+        super().descripcion()
+        print("Salario: {} Antiguedad: {}".format(self.salario,self.antiguedad))
+
+
+
+pepe=Persona("Pepe",34,"valencia")
+pepe.descripcion()
+
+mario=Empleado(3000,"Nose","Mario",23,"China")
+print(mario.salario)
+mario.descripcion()
+
+##print(isinstance(mario, Empleado))
+##print(isinstance(pepe, Empleado))
+##print(isinstance(mario, Persona))
+##print(isinstance(pepe,Persona))
+
+print(issubclass(Empleado, Persona))
+print(issubclass(Persona,Empleado))
+print(issubclass(Empleado, object))
